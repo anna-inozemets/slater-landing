@@ -12,10 +12,10 @@
     <div class="header__connect content__container">
       <div class="header__connect-logo-info">
         <div class="header__connect-logo">
-          <a href="">
+          <a href="/">
             <img src="./images/logo.svg" alt="SLATER">
           </a>
-          <a href="">Slater</a>
+          <a href="/">Slater</a>
         </div>
         <p>
           Послуги з монтажу, ремонту та заміни покрівлі
@@ -23,60 +23,88 @@
       </div>
       <div class="header__connect-links-container">
         <div class="header__connect-links">
-          <a href="">+38 (068) 638 58 68</a>
+          <a href="tel:+38 (068) 638 58 68">+38 (068) 638 58 68</a>
           <a href="">пн-пт 8:00-20:00</a>
         </div>
-        <a href="">Зворотній зв’язок</a>
+        <a href="#faq" class="open-modal-button">Зворотній зв’язок</a>
       </div>
     </div>
     <div class="header__nav">
       <nav class="content__container">
         <ul class="header__nav-list">
-          <li>
-            <a href="">
+          <li class="menu-item-has-children">
+            <a href="#advantages">
               Переваги
             </a>
+            <ul class="submenu">
+              <li>
+                Монтаж покрівлі
+              </li>
+              <li>
+                Ремонт покрівлі
+              </li>
+              <li>
+                Утеплення покрівлі
+              </li>
+              <li>
+                Монтаж водостоків
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="">
+            <a href="#reviews">
               Відгуки
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#about-us">
               Про нас
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#team">
               Команда
             </a>
           </li>
-          <li>
-            <a href="">
+          <li class="menu-item-has-children">
+            <a href="#objects">
               Об’єкти
             </a>
+            <ul class="submenu">
+              <li>
+                Об'єкт №1
+              </li>
+              <li>
+                Об'єкт №2
+              </li>
+              <li>
+                Об'єкт №3
+              </li>
+              <li>
+                Об'єкт №4
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="">
+            <a href="#contacts">
               Контакти
             </a>
           </li>
         </ul>
-        <div class="header__nav-buttons">
-          <button>
-            UA
-          </button>
-          <button>
-            RU
-          </button>
-        </div>
+        <ul class="header__nav-buttons">
+          <li class="wpml-ls-current-language">
+            <a href="">UA</a>
+          </li>
+          <li>
+            <a href="">RU</a>
+          </li>
+        </ul>
       </nav>
     </div>
     <div class="header__mobile">
       <div class="header__mobile-logo-container content__container">
         <div class="header__mobile-connect-logo-info">
-          <a href="">
+          <a href="/">
             <img src="./images/logo.svg" alt="SLATER">
           </a>
           <p>
@@ -92,39 +120,39 @@
       <nav class="header__mobile-nav content__container">
         <ul class="header__nav-list header__mobile-nav-list">
           <li>
-            <a href="">
+            <a href="#advantages">
               Переваги
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#reviews">
               Відгуки
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#about-us">
               Про нас
             </a>
           </li>
           <li>
-              <a href="">
+            <a href="#team">
               Команда
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#objects">
               Об’єкти
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#contacts">
               Контакти
             </a>
           </li>
         </ul>
       </nav>
-      <a href="">+38 (068) 638 58 68</a>
-      <a href="">Зворотній зв’язок</a>
+      <a href="tel:+38 (068) 638 58 68">+38 (068) 638 58 68</a>
+      <a href="/" class="open-modal-button">Зворотній зв’язок</a>
     </div>
   </header>
   <main>
@@ -141,11 +169,11 @@
           <p>
             Довірте монтаж покрівлі справжнім професіоналам. На всі роботи гарантія.
           </p>
-          <div class="greeting__content-button">
+          <div class="greeting__content-button open-modal-button">
             <a href="">
-              ЗАМОВИТИ
-            </a>
-            <a href="">
+              <strong>
+                ЗАМОВИТИ
+              </strong>
               Безкоштовний розрахунок проєкту
             </a>
           </div>
@@ -209,7 +237,7 @@
         </p>
       </div>
     </section>
-    <section class="advantages content__container">
+    <section id="advantages" class="advantages content__container">
       <h2>
         Переваги роботи з нами:
       </h2>
@@ -305,7 +333,7 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section id="reviews" class="reviews">
       <div class="reviews__background"></div>
       <div class="content__container">
         <h2>
@@ -328,9 +356,7 @@
             </div>
             <div class="reviews__slider-card-paragraph">
               <p>
-                Компанія показала професіоналізм та експертизу у своїй галузі. Вони були ввічливими, 
-                відповідальними та пунктуальними. Їхня робота була виконана дуже швидко та професійно, результат 
-                був бездоганним. Рекомендую всім, хто шукає підрядника з покрівельних робіт.
+                Компанія показала професіоналізм та експертизу у своїй галузі.
               </p>
             </div>
           </div>
@@ -496,12 +522,12 @@
             здача об’єкту та підписання акту виконаних робіт
           </p>
         </div>
-        <a href="">
+        <a href="" class="open-modal-button">
           Замовити консультацію
         </a>
       </div>
     </section>
-    <section class="about content__container">
+    <section id="about-us" class="about content__container">
       <h2>
         Про компанію:
       </h2>
@@ -532,12 +558,12 @@
         <p>
           залиште заявку, а все решту зробимо ми
         </p>
-        <a href="">
+        <a href="" class="open-modal-button">
           Залишити заявку
         </a>
       </div>
     </section>
-    <section class="team content__container">
+    <section id="team" class="team content__container">
       <h2>
         Команда
       </h2>
@@ -609,7 +635,7 @@
         </div>
       </div>
     </section>
-    <section class="projects content__container">
+    <section id="objects" class="projects content__container">
       <h2>
         Виконані проєкти:
       </h2>
@@ -727,7 +753,7 @@
         Більше проєктів +
       </button>
     </section>
-    <section class="faq content__container">
+    <section id="faq" class="faq content__container">
       <h2>
         FAQ
       </h2>
@@ -838,16 +864,34 @@
         </div>
       </div>
     </section>
+    <section class="modal__window">
+      <div class="modal__window-content faq__form-container">
+        <button class="modal__window-content-close-button">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="#4C4A4B" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.413849 11.6088C-0.13277 12.1554 -0.13277 13.0431 0.413849 13.5898C0.960468 14.1364 1.84818 14.1364 2.39479 13.5898L6.99951 8.98067L11.609 13.5858C12.1557 14.1324 13.0429 14.1324 13.5895 13.5858C14.1362 13.0392 14.1362 12.1515 13.5895 11.6049L8.98046 7.00016L13.5852 2.39107C14.1318 1.84445 14.1318 0.956742 13.5852 0.410123C13.0386 -0.136496 12.1508 -0.136496 11.6042 0.410123L6.99951 5.01921L2.39042 0.414495C1.8438 -0.132124 0.956095 -0.132124 0.409476 0.414495C-0.137143 0.961114 -0.137143 1.84882 0.409476 2.39544L5.01857 7.00016L0.413849 11.6092V11.6088Z"/>
+          </svg>
+        </button>
+        <form action="">
+          <input name="name" type="text" placeholder="Ім’я">
+          <input name="email" type="email" placeholder="Email">
+          <input name="phone" type="tel" placeholder="Телефон">
+          <textarea name="question" placeholder="Ваше запитання"></textarea>
+          <button>
+            Відправити
+          </button>
+        </form>
+      </div>
+    </section>
   </main>
-  <footer>
+  <footer id="contacts">
     <div class="footer__content-container content__container">
       <div class="footer__content">
         <div class="footer__content-row">
           <div class="footer__content-logo-info">
-            <a href="">
+            <a href="/">
               <img src="./images/logo.svg" alt="Slater">
             </a>
-            <a href="">Slater</a>
+            <a href="/">Slater</a>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed id inventore animi quasi. Iure expedita
@@ -860,23 +904,23 @@
             Контакти:
           </h3>
           <div class="footer__content-row-contacts">
-            <a href="">
+            <a href="https://goo.gl/maps/eWVbn7fh7HAR4DFy8" target="_blank">
               03143 м. Київ вул. Академіка Заболотного 150 а оф. 33
             </a>
           </div>
           <div class="footer__content-row-contacts">
-            <a href="">
+            <a href="tel:+38 (044) 593 26 82">
               +38 (044) 593 26 82
             </a>
-            <a href="">
+            <a href="tel:+38 (050) 983 36 15">
               +38 (050) 983 36 15
             </a>
-            <a href="">
+            <a href="tel:+38 (097) 269 84 00">
               +38 (097) 269 84 00
             </a>
           </div>
           <div class="footer__content-row-contacts">
-            <a href="">
+            <a href="mailto:slaterdax@ukr.net">
               slaterdax@ukr.net
             </a>
           </div>
@@ -887,22 +931,22 @@
           </h3>
           <ul class="footer__content-row-list">
             <li>
-              <a href="">Переваги</a>
+              <a href="#advantages">Переваги</a>
             </li>
             <li>
-              <a href="">Відгуки</a>
+              <a href="#reviews">Відгуки</a>
             </li>
             <li>
-              <a href="">Про нас</a>
+              <a href="#about-us">Про нас</a>
             </li>
             <li>
-              <a href="">Команда</a>
+              <a href="#team">Команда</a>
             </li>
             <li>
-              <a href="">Об’єкти</a>
+              <a href="#objects">Об’єкти</a>
             </li>
             <li>
-              <a href="">FAQ</a>
+              <a href="#faq">FAQ</a>
             </li>
           </ul>
         </div>

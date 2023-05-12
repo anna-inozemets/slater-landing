@@ -26,6 +26,13 @@ function toggleButtonMore(button, content, maxHeight, expandText, collapseText) 
   }
 }
 
+function toggleOpenModal(element) {
+  element.addEventListener('click', (event) => {
+    event.preventDefault();
+    modalWindow.classList.toggle('open');
+  })
+}
+
 const accordionItems = document.querySelectorAll('.faq__accordion-item');
 
 for (let i = 0; i < accordionItems.length; i++) {
@@ -34,12 +41,10 @@ for (let i = 0; i < accordionItems.length; i++) {
 
 const headerNavButton = document.querySelector('.header__button');
 const headerNav = document.querySelector('.header__mobile-nav');
-const body = document.querySelector('body')
 
 headerNavButton.addEventListener('click', () => {
   headerNavButton.classList.toggle('active');
   headerNav.classList.toggle('active');
-  body.classList.toggle('no-scroll');
 })
 
 const buttonMoreAbout = document.querySelector('.button__more');
@@ -53,3 +58,13 @@ const contentProjects = buttonMoreProjects.previousElementSibling;
 buttonMoreProjects.addEventListener('click', () => {
   toggleButtonMore(buttonMoreProjects, contentProjects, 1000, 'Більше проєктів +', 'Менше проєктів -');
 });
+
+const openModalButtons = document.querySelectorAll('.open-modal-button');
+const modalWindow = document.querySelector('.modal__window');
+const closeModalButton = document.querySelector('.modal__window-content-close-button');
+
+for (const openModalButton of openModalButtons) {
+  toggleOpenModal(openModalButton)
+}
+
+toggleOpenModal(closeModalButton);
