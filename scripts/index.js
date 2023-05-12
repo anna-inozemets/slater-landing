@@ -30,8 +30,11 @@ function toggleOpenModal(element) {
   element.addEventListener('click', (event) => {
     event.preventDefault();
     modalWindow.classList.toggle('open');
+    body.classList.toggle('no-scroll');
   })
 }
+
+const body = document.querySelector('body');
 
 const accordionItems = document.querySelectorAll('.faq__accordion-item');
 
@@ -41,11 +44,23 @@ for (let i = 0; i < accordionItems.length; i++) {
 
 const headerNavButton = document.querySelector('.header__button');
 const headerNav = document.querySelector('.header__mobile-nav');
+const burgerLinks = document.querySelectorAll('.header__mobile-nav-list a');
+
+console.log(burgerLinks);
 
 headerNavButton.addEventListener('click', () => {
   headerNavButton.classList.toggle('active');
   headerNav.classList.toggle('active');
+  body.classList.toggle('no-scroll')
 })
+
+for (const burgerLink of burgerLinks) {
+  burgerLink.addEventListener('click', () => {
+    headerNavButton.classList.remove('active');
+    headerNav.classList.remove('active');
+    body.classList.toggle('no-scroll');
+  })
+}
 
 const buttonMoreAbout = document.querySelector('.button__more');
 const contentAbout = buttonMoreAbout.previousElementSibling;
@@ -61,10 +76,35 @@ buttonMoreProjects.addEventListener('click', () => {
 
 const openModalButtons = document.querySelectorAll('.open-modal-button');
 const modalWindow = document.querySelector('.modal__window');
-const closeModalButton = document.querySelector('.modal__window-content-close-button');
+const closeModalButtons = document.querySelectorAll('.close-modal-window');
 
 for (const openModalButton of openModalButtons) {
   toggleOpenModal(openModalButton)
 }
 
-toggleOpenModal(closeModalButton);
+for (const closeModalButton of closeModalButtons) {
+  toggleOpenModal(closeModalButton);
+}
+
+const submenus = document.querySelectorAll('.menu-item-has-children')
+
+for (const submenu of submenus) {
+  submenu.addEventListener('mouseenter', function() {
+    var submenuItem = this.querySelector('.submenu');
+    submenuItem.style.opacity = '0';
+    submenuItem.style.pointerEvents = 'all';
+    setTimeout(function() {
+      submenuItem.style.opacity = '1';
+    }, 200);
+  });
+
+  submenu.addEventListener('mouseleave', function() {
+    var submenuItem = this.querySelector('.submenu');
+    submenuItem.style.opacity = '1';
+    setTimeout(function() {
+      submenuItem.style.opacity = '0';
+      submenuItem.style.pointerEvents = 'none';
+    }, 200);
+  });
+}
+
