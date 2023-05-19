@@ -26,11 +26,27 @@ function toggleButtonMore(button, content, maxHeight, expandText, collapseText) 
   }
 }
 
-function toggleOpenModal(element) {
-  element.addEventListener('click', (event) => {
+// function toggleOpenModal(button, window) {
+//   button.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     window.classList.toggle('open');
+//     body.classList.toggle('no-scroll');
+//   })
+// }
+
+function openModal(button, window) {
+  button.addEventListener('click', (event) => {
     event.preventDefault();
-    modalWindow.classList.toggle('open');
-    body.classList.toggle('no-scroll');
+    window.classList.add('open');
+    body.classList.add('no-scroll');
+  })
+}
+
+function closeModal(button, window) {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.classList.remove('open');
+    body.classList.remove('no-scroll');
   })
 }
 
@@ -75,22 +91,28 @@ buttonMoreProjects.addEventListener('click', () => {
 });
 
 const openModalButtons = document.querySelectorAll('.open-modal-button');
+const openModalsButtonWithCalculations = document.querySelector('.open-modal-button--with-calculations');
 const modalWindow = document.querySelector('.modal__window');
+const modalWindowWithCalculations = document.querySelector('.modal__window--with-calculations');
 const closeModalButtons = document.querySelectorAll('.close-modal-window');
+const closeModalButtonWithCalculations = document.querySelector('.close-modal-window--with-calculations');
+
+openModal(openModalsButtonWithCalculations, modalWindowWithCalculations);
+closeModal(closeModalButtonWithCalculations, modalWindowWithCalculations);
 
 for (const openModalButton of openModalButtons) {
-  toggleOpenModal(openModalButton)
+  openModal(openModalButton, modalWindow)
 }
 
 for (const closeModalButton of closeModalButtons) {
-  toggleOpenModal(closeModalButton);
+  closeModal(closeModalButton, modalWindow);
 }
 
 const submenus = document.querySelectorAll('.menu-item-has-children')
 
 for (const submenu of submenus) {
   submenu.addEventListener('mouseenter', function() {
-    var submenuItem = this.querySelector('.submenu');
+    const submenuItem = this.querySelector('.submenu');
     submenuItem.style.opacity = '0';
     submenuItem.style.pointerEvents = 'all';
     setTimeout(function() {
@@ -99,7 +121,7 @@ for (const submenu of submenus) {
   });
 
   submenu.addEventListener('mouseleave', function() {
-    var submenuItem = this.querySelector('.submenu');
+    const submenuItem = this.querySelector('.submenu');
     submenuItem.style.opacity = '1';
     setTimeout(function() {
       submenuItem.style.opacity = '0';
